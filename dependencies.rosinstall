@@ -1,0 +1,50 @@
+- git:
+   local-name: catkin_simple
+   uri: https://github.com/catkin/catkin_simple.git
+- git:
+   local-name: doxygen_catkin
+   uri: https://github.com/ethz-asl/doxygen_catkin.git
+- git:
+   local-name: eigen_catkin
+   uri: https://github.com/ethz-asl/eigen_catkin.git
+- git:
+   local-name: eigen_checks
+   uri: https://github.com/ethz-asl/eigen_checks.git
+- git:
+   local-name: gflags_catkin
+   uri: https://github.com/ethz-asl/gflags_catkin.git
+- git:
+   local-name: glog_catkin
+   uri: https://github.com/ethz-asl/glog_catkin.git
+- git:
+   local-name: gtsam_catkin
+   uri: https://github.com/ethz-asl/gtsam_catkin.git
+   version: c9f95e76bba7126ede3f98a967b1ba43e1372c22
+- git:
+   local-name: GTSAM
+   uri: https://bitbucket.org/gtborg/gtsam.git
+   version: b66dda2fe5ed2cf9e801119e481530e4cf13a94e
+- git:
+   local-name: minkindr
+   uri: https://github.com/ethz-asl/minkindr.git
+- git:
+   local-name: minkindr_ros
+   uri: https://github.com/ethz-asl/minkindr_ros.git
+- git:
+   local-name: minkindr_gtsam
+   uri: https://github.com/ethz-asl/minkindr_gtsam.git
+- git:
+   local-name: opencv2_catkin
+   uri: https://github.com/ethz-asl/opencv2_catkin.git
+- git:
+   local-name: opencv_blobs_catkin
+   uri: https://github.com/ethz-asl/opencv_blobs_catkin.git
+- git:
+   local-name: pcl_catkin
+   uri: https://github.com/ethz-asl/pcl_catkin.git
+- git:
+   local-name: libnabo
+   uri: https://github.com/ethz-asl/libnabo.git
+- git:
+   local-name: xerces_catkin
+   uri: https://github.com/ethz-asl/xerces_catkin.git

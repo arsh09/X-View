@@ -1,0 +1,8 @@
+/*! \mainpage XView: Semantic SLAM
+ *
+ *  Wiki: https://github.com/ethz-asl/x-view
+ *
+ * This package relies on the following dependencies :
+ *  \verbinclude package.xml
+ */
+
