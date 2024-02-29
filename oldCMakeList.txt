@@ -19,16 +19,9 @@ add_definitions(-DX_VIEW_ROOT_DIR=${CMAKE_CURRENT_SOURCE_DIR}/)
 add_definitions(-DX_VIEW_LOG_DIR=${CMAKE_CURRENT_SOURCE_DIR}/logs/)
 add_definitions(-DX_VIEW_OUT_DIR=${CMAKE_CURRENT_SOURCE_DIR}/output/)
 
-find_package(PCL  REQUIRED)
-#find_package(catkin_simple 0.1.0 REQUIRED)
-find_package(OpenCV REQUIRED)
-
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(glog REQUIRED libglog)
-
-#find_package(glog 0.3.4 REQUIRED)
-
-# catkin_simple(ALL_DEPS_REQUIRED)
+find_package(PCL 1.8 REQUIRED)
+find_package(catkin_simple 0.1.0 REQUIRED)
+catkin_simple(ALL_DEPS_REQUIRED)
 
 # X-View core library
 cs_add_library(${PROJECT_NAME}
@@ -172,4 +165,3 @@ add_doxygen(REQUIRED)
 
 cs_install()
 cs_export()
-
