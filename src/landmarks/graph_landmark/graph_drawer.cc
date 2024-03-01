@@ -83,7 +83,7 @@ cv::Mat GraphDrawer::createImageFromBlobs(const ImageBlobs& blobs,
         std::vector<std::vector<cv::Point2i>> v_contours;
         v_contours.push_back(blob.external_contour_pixels);
 
-        cv::drawContours(image, v_contours, 0, color, CV_FILLED);
+        cv::drawContours(image, v_contours, 0, color, -1);
       }
   }
   return image;
@@ -111,7 +111,7 @@ void GraphDrawer::addLabelsToImage(const ImageBlobs& blobs, cv::Mat* image) {
         const std::string text = label + ") " + label_descr;
         cv::putText(*image, text, blob.pixel_center, cv::FONT_HERSHEY_DUPLEX,
                     GraphDrawer::label_scale_, GraphDrawer::label_color_,
-                    1, CV_AA);
+                    1, cv::LINE_AA);
         // if the blob has an instance id associated to it, render it on a
         // new line.
         // new line.
@@ -120,7 +120,7 @@ void GraphDrawer::addLabelsToImage(const ImageBlobs& blobs, cv::Mat* image) {
               "id: " + std::to_string(blob.instance);
           cv::putText(*image, instance, blob.pixel_center + cv::Point2i(0, 20),
                       cv::FONT_HERSHEY_DUPLEX, GraphDrawer::label_scale_,
-                      GraphDrawer::label_color_, 1, CV_AA);
+                      GraphDrawer::label_color_, 1, cv::LINE_AA);
 
         }
       }
@@ -176,7 +176,7 @@ void GraphDrawer::addGraphNodesToImage(const Graph& graph, cv::Mat* image) {
     if (std::find(labels_to_render.begin(), labels_to_render.end(), label) !=
         std::end(labels_to_render)) {
       cv::circle(*image, center, GraphDrawer::vertex_radius_,
-                 GraphDrawer::vertex_color_, CV_FILLED);
+                 GraphDrawer::vertex_color_, -1);
     }
   }
 }
@@ -247,7 +247,7 @@ void GraphDrawer::addCoordinatesToImage(const Graph& graph, cv::Mat* image) {
               (location_3d[1]) + ", " + std::to_string(location_3d[2]) + "]";
       cv::putText(*image, coord, center + cv::Point2i(0, 40),
                   cv::FONT_HERSHEY_DUPLEX, GraphDrawer::label_scale_ * 0.5,
-                  GraphDrawer::label_color_, 1, CV_AA);
+                  GraphDrawer::label_color_, 1, cv::LINE_AA);
     }
   }
 }

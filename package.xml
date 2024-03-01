@@ -18,7 +18,7 @@
     <depend>minkindr</depend>
     <depend>gtsam</depend>
     <depend>opencv3</depend>
-    <depend>opencv_blobs_catkin</depend>
+    <depend>opencvblobslib</depend>
     <depend>pcl_ros</depend>
     <depend>libnabo</depend>
 
